@@ -1,0 +1,25 @@
+server:
+  port: 8099
+
+
+spring:
+  datasource:
+    #基本属性
+    url: jdbc:mysql://localhost:3306/statistic?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true&useSSL=false&serverTimezone=Asia/Shanghai&allowMultiQueries=true
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  redis2:
+    database: 0
+    host: localhost
+    port: 6379
+    password: 123456
+    pool:
+      max-active: 8
+      max-wait: -1
+      max-idle: 8
+      min-idle: 0
+    timeout: 0
+    expire: 1800
+
+
