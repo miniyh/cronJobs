@@ -33,7 +33,7 @@ public class LoginInfoServiceImpl implements LoginInfoService {
     public int loginDetailToDB() {
         System.out.println("new loginDetailToDB -------- now time:" + new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date()));
         redisToMysql(0);
-        System.gc();
+//        System.gc();
         return 0;
     }
 

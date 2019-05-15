@@ -32,7 +32,7 @@ public class PushInfoServiceImpl implements PushInfoService {
     public int dateToDB() {
         System.out.println("new dateToDB -------- now time:" + new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date()));
         autoPushMysql();
-        System.gc();
+//        System.gc();
         return 0;
     }
 
