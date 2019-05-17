@@ -179,7 +179,7 @@ public class LoginInfoServiceImpl implements LoginInfoService {
             int count = namedParameterJdbcTemplate.queryForObject(querySql,map, Integer.class);
             if (count>0){
                 updateList.add(loginInfoList.get(i));
-                if (updateList.size()>90){
+                if (updateList.size()>10000){
                     updateSources  = SqlParameterSourceUtils.createBatch(updateList.toArray());
                     namedParameterJdbcTemplate.batchUpdate(updateSql, updateSources);
                     updateList = new ArrayList<>();
@@ -225,7 +225,7 @@ public class LoginInfoServiceImpl implements LoginInfoService {
             int count =  namedParameterJdbcTemplate.queryForObject(querySql,map, Integer.class);
             if (count>0){
                 updateList.add(loginInfoList.get(i));
-                if (updateList.size()>90){
+                if (updateList.size()>10000){
                     updateSources  = SqlParameterSourceUtils.createBatch(updateList.toArray());
                     namedParameterJdbcTemplate.batchUpdate(updateSql, updateSources);
                     updateList = new ArrayList<>();
